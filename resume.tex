@@ -1,0 +1,190 @@
+%% start of file `template_en.tex'.
+%% Copyright 2007 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[10pt,letter]{moderncv}
+
+% moderncv themes
+\moderncvtheme[red]{classic}                               % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+
+% character encoding
+%\usepackage[]{inputenc}                                 % replace by the encoding you are using
+\usepackage{fancyhdr}
+
+\usepackage{color}
+%\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+
+% adjust the page margins
+\usepackage[scale=0.9]{geometry}
+\setlength{\hintscolumnwidth}{3.2cm}                     % if you want to change the width of the column with the dates
+%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
+\AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
+\recomputelengths                                           % required when changes are made to page layout lengths
+
+% personal data
+\firstname{Andrew}
+\familyname{Spott}
+%\title{R\'esum\'e}                                    % optional, remove the line if not wanted
+%\title{ }                                    % optional, remove the line if not wanted DAD SUGGESTS DROPPING RESUME
+\address{Boulder, CO 80304}    % optional, remove the line if not wanted
+% \mobile{415-596-3883}                                       % optional, remove the line if not wanted
+% \email{andrew.spott (at) gmail (dot) com}                     % optional, remove the line if not wanted
+% \homepage{spott.github.io}
+\mobile{415-596-3883}                                       % optional, remove the line if not wanted
+\email{andrew.spott (at) gmail (dot) com}                     % optional, remove the line if not wanted
+%\homepage{spott.github.io}
+%\extrainfo{additional information (optional)}              % optional, remove the line if not wanted
+%\photo[64pt]{picture}                                      % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
+%\quote{Some quote (optional)}                              % optional, remove the line if not wanted
+
+%\nopagenumbers{}                                           % uncomment to suppress automatic page numbering for CVs longer than one page
+\pagestyle{fancy}
+\chead{Andrew Spott}
+
+
+%-----------------------------------------------------------
+%            content
+%-----------------------------------------------------------
+\begin{document}
+
+\maketitle
+\vspace{-.7cm}
+\thispagestyle{empty}
+Broadly skilled Physics PhD and Data Scientist with over a decade of experience in scientific and mathematical computing.  
+I like solving hard problems that generate strong business value.
+
+\section{Experience}
+\cventry{2021-}{Head of Data Science}{Submittable}{}{}{Submittable is a leader in the grant management space, 
+helping projects succeed at launching, managing, and measuring their social impact projects.}
+\cvline{$\diamond$}{\textbf{Projects}: I led the data science and auto-review efforts for the Working Washington Small Business Grant Program: Round 4 
+and the Washington Covid-19 Immigrant Relief Fund projects.  We developed custom data analytics to allow these programs to optimize their funds' 
+distribution, ensuring that money got to those with the most need according to their program goals.  We also developed the automatic review code 
+which scored submissions according to rubrics provided by program leaders along with connecting to external data sources to validate submission information.  
+Since this, I have been a key player in the solutioning for various larger enterprise deals, enabling data science and analytics services for our customers.}
+\cvline{$\diamond$}{\textbf{Leadership}:  I lead our machine learning product team in the development of data products within the Submittable platform.  
+I have operated as both the engineering manager, as well as the product manager, enabling the team to create great machine learning and data driven products.  
+I also lead our customer data analytics platform intiative that is enabling our customers to better understand their project and their data from within our platform.}
+
+\cvline{$\diamond$}{\textbf{Partnerships}:  Ideated and led the partnership that enabled a product known as Accelerated Review.  Accelerated Review is a custom 
+machine learning modeling product to reduce review burdens for large projects.  Essentially we build a custom machine learning model using a smaller number of 
+reviews and apply that model to review the rest of the submissions.}
+%\cvline{$\diamond$}{\textbf{Product Management}:  }
+
+\cventry{2017-2021}{Head of Data Science}{TruU Inc.}{}{}{TruU is a leading provider of passwordless authentication for the enterprise.  I spent three years building 
+the data-science team and our initial behavioral biometrics.  I worked on everything within the data pipeline: from the initial development of our iOS application 
+for data collection to the initial model development of our behavioral biometrics to the inference engine in production.}
+\cvline{$\diamond$}{\textbf{Model Development}: I did the initial development of our gait biometric, which involved designing the data collection spec, developing 
+the initial "walk/not-walk" model for what signals we would decide on, and developing the initial model using pytorch and deep learning.}
+\cvline{$\diamond$}{\textbf{Datascience Support Infrastructure}: I managed our data science compute cluster for all data scientists, which was used for all 
+research compute needs along with batch training for models in production.  I also wrote a large chunk of our internal deep learning library which among other 
+things leveraged LMDB to enable easy use of out of memory data for training and ensure versioned models for reproducibility.}
+\cvline{$\diamond$}{\textbf{Leadership}: I led a team of 2-4 data scientists in the development of two other biometrics, along with the continued development 
+of the gait biometric.  This included technical advising, strategic planning and management.}
+% \cvline{$\diamond$}{\textbf{Technical Skills}: I continually leverage my broad skillset to keep the data science team on track and progressing.  My IT skills have been used in the management of our local compute cluster.  I have used Python and Julia for general data analysis and model development, C++ for model deployment, and Swift for the initial data collection app development.  I have managed postgresql databases and used kibana to develop visualizations and dashboards for data collection monitoring.}
+
+\cventry{2011--2017}{Research Assistant}{University of Colorado Boulder}{}{}{}
+ \cvline{$\diamond$}{\textbf{Programming:  }Developed a non-trivial code to solve the time
+   dependent Schr\"odinger equation (TDSE) in a field-free energy basis. 
+   The code was developed using PETSc and Boost MPI in C++14, with an approximate size of 10kloc.}
+ \cvline{$\diamond$}{\textbf{Data Analysis:  }Data analysis package for the above
+   TDSE solver output. Developed using pandas, numpy, scipy and matplotlib.}
+
+ \cventry{\phantom{2000--}2015}{Data Science Intern}{Cognilytics, Centurylink}{Denver}{}{}
+ \cvline{$\diamond$}{\textbf{Data Science: } Preliminary analysis of anomalous
+   network traffic for network security applications using raw packet captures with
+   support vector machines, recurrent neural nets and random forests.}
+
+ \cventry{2010--2017}{Teaching Assistant}{University of Colorado
+   Boulder}{}{}{Taught a wide variety of introductory physics classes.
+   Demonstrated a strong ability to take complex mathematical concepts and
+   explain them intuitively.}
+
+\section{Education}
+\cventry{2010--2017}{University of Colorado Boulder}{School of Arts and Sciences}{}{}{}
+\cvline{$\diamond$}{\textbf{Ph.D.} Physics, \emph{Perturbative and
+    ab-initio calculations of the electrical susceptibilities of atoms}}
+\cvline{$\diamond$}{\textbf{Masters of Science} Physics, 2013}
+\cventry{2004--2010}{University of Washington}{School of Arts and Sciences}{}{}{}
+\cvline{$\diamond$}{\textbf{Bachelor of Science} Physics.}
+
+\section{Side Projects}
+\cventry{}{\textbf{A C++ wrapper around the C Library PETSc}}{}{}{}{}
+\cvline{\textbf{petsc-cpp}}{\emph{https://github.com/spott/petsc-cpp}}
+\cvline{$\diamond$}{An object oriented wrapper around PETSc for faster and safer
+  PETSc development. The wrapper includes RAII types, operator overloading where
+  it makes sense, and simpler interfaces to common tasks.}
+% \cvline{\textbf{webpage-classifier}}{\emph{https://github.com/spott/webpage-classifier}}
+% \cvline{$\diamond$}{A topic classifier for webpages,
+%     developed in a literate style using reddit link posts as a
+%     labeled data source.  Uses SQL, Docker, asyncio, and Latent Dirichlet
+%     Analysis via gensim among other technologies.}
+
+  %\section{Skills}
+  % \cvline{\textbf{Python:}}{Comfortable with NumPy, SciPy, pandas and
+  %   matplotlib.  Familiar with asyncio (including asyncpg and aiohttp), gensim and Scikit-Learn}
+\cvline{\textbf{Data Science:}}{NumPy, SciPy, Pandas, Bokeh, Pytorch, Matplotlib}
+\cvline{\textbf{Languages:}}{Python, C/C++/C++14, Swift, Julia, Bash/ZSH, SQL, Elasticsearch, LMDB}
+%\cvline{\textbf{Other Languages:}}{Haskell, Mathematica}
+%\cvline{\textbf{OS:}}{OS X, Unix/Linux, Windows}
+
+\section{Selected Publications and Patents}
+\cvline{US Patent }{\#US20220382845A1 \emph{Supervised and Unsupervised Techniques for Motion Classification}}
+\cvline{2022}{\textbf{L. Budman, A. Agrawal, A. Spott}}
+
+\cvline{US Patent }{\#US20200302722A1 \emph{Machine Learning-Based Platform For User Identification}}
+\cvline{2021}{\textbf{L. Budman, A. Agrawal, A. Spott, M. Graf}}
+
+\cvline{US Patent }{\#US20210248219A1 \emph{Integrated Quality Assessment for a Passive Authentication System}}
+\cvline{2021}{\textbf{L. Budman, A. Agrawal, A. Spott, J. Carli}}
+
+\cvline{US Patent }{\#US20220182379A1 \emph{Context-Based Risk Assessment for an Identity Verification System}}
+\cvline{2021}{\textbf{L. Budman, A. Agrawal, O. Rodak, A. Spott}}
+
+\cvline{US Patent }{\#US20210256789A1 \emph{Detecting Intent of a User Requesting Access to a Secured Asset}}
+\cvline{2021}{\textbf{D. Pasirstein, J. Welch, A. Spott, L. Budman, A. Agrawal, N. Hacking}}
+
+\cvline{Phys. Rev. A}{\emph{Time-dependent susceptibility of helium atom in intense laser pulses}}
+\cvline{2017}{\textbf{A. Spott}, A. Jaron-Becker, and A. Becker}
+
+\cvline{Phys. Rev. A}{\emph{Transition from perturbative to nonperturbative interaction in low-order-harmonic generation}}
+\cvline{2015}{\textbf{A. Spott}, A. Becker, and A. Jaron-Becker}
+
+\cvline{Phys. Rev. A}{\emph{Ab initio and perturbative calculations of the electric susceptibility of atomic hydrogen}}
+\cvline{2014}{\textbf{A. Spott}, A. Jaron-Becker, and A. Becker}
+
+\cvline{Optics Express}{\emph{Silicon-on-sapphire integrated waveguides for the mid-infrared} Optics Express}
+\cvline{2010}{T. Baehr-Jones, A. Spott, R. Ilic, \textbf{A. Spott}, B. Penkov, W. Asher, and M. Hochberg}
+ 
+% \section{Selected Presentations}
+% \cvline{4 June 2014}{\emph{Theoretical analysis of the nonlinear susceptibility of hydrogen atom}}
+% \cvline{}{45th Annual Meeting of the APS Division of Atomic, Molecular and Optical Physics, \textbf{Madison, WI}}
+% \cvline{4 June 2013}{\emph{Numerical basis-state method for strong-field excitation and ionization}}
+% \cvline{}{2013 Joint Meeting of the APS Division of Atomic, Molecular \& Optical Physics and the CAP Division of Atomic, Molecular \& Optical Physics, \textbf{Quebec City, Canada}}
+
+
+%\closesection{}                   % needed to renewcommands
+%\renewcommand{\listitemsymbol}{-} % change the symbol for lists
+
+%\section{Extra 1}
+%\cvlistitem{Item 1}
+%\cvlistitem{Item 2}
+%\cvlistitem[+]{Item 3}            % optional other symbol
+
+%\section{Extra 2}
+%\cvlistdoubleitem[\Neutral]{Item 1}{Item 4}
+%\cvlistdoubleitem[\Neutral]{Item 2}{Item 5}
+%\cvlistdoubleitem[\Neutral]{Item 3}{}
+
+% Publications from a BibTeX file
+\nocite{*}
+\bibliographystyle{plain}
+%\bibliography{publications}       % 'publications' is the name of a BibTeX file
+
+\end{document}
+
+
+%% end of file `template_en.tex'.
